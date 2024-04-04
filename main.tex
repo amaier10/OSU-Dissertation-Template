@@ -1,0 +1,88 @@
+\DocumentMetadata{testphase={phase-III, math}}
+\documentclass[12 pt]{article}
+\usepackage[utf8]{inputenc}
+\linespread{2.0}
+
+\usepackage{lipsum}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+
+%%%%% TIMES FONT IN TEXT AND COMPUTER MODERN IN MATH MODE %%%%%
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{amsmath, amssymb}
+\renewcommand\rmdefault{ptm}
+%%%%% TIMES FONT IN TEXT AND COMPUTER MODERN IN MATH MODE %%%%%
+
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{derivative}
+\usepackage{mathrsfs}
+\usepackage{chemformula}
+\usepackage{siunitx}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+% pdflscape is for displaying specific pages in landscape
+\usepackage{pdflscape}
+
+% booktabs is for cleaner table formatting
+\usepackage{booktabs}
+
+% different bibstyles are available
+\usepackage[backend=biber,
+			bibstyle=ieee,
+			citestyle=numeric-comp]{biblatex}
+\addbibresource{dissertation-bibliography}
+
+\usepackage[pdfa]{hyperref}
+\hypersetup{colorlinks=true, allcolors=black,
+	pdftitle={Working Title},%MATCH DOCUMENT TITLE
+	pdflang={en-US}
+}
+
+\usepackage{subfiles}
+\title{{Working Title}\\
+		\vspace*{18pt}
+		{\large Dissertation}\\
+		{\large Presented in Partial Fulfillment of the Requirements for the
+				Degree Doctor of Philosophy
+				in the Graduate School of The Ohio State University}\\
+		\vspace*{24pt}
+		{\large By}\\
+		{\large Brutus Buckeye, B.S.}\\
+		{\large Graduate Program in Nuclear Engineering}\\
+		\vspace*{36pt}
+		{\large \textsc{The Ohio State University}}\\
+		{\large 2026}\\
+		\vspace*{24pt}
+		{\large Dissertation Committee:\\
+		Woody Hayes, Advisor}
+}
+\date{}
+\begin{document}
+	\subfile{sections/title-page.tex}
+	\subfile{sections/copyright.tex}
+	\pagenumbering{roman}
+	\subfile{sections/abstract.tex}
+	\subfile{sections/dedication.tex}
+	\subfile{sections/acknowledgments.tex}
+	\subfile{sections/vita.tex}	
+	
+	\tableofcontents
+	\clearpage
+	\listoffigures
+	\clearpage
+	\listoftables
+	\clearpage
+	
+	\pagenumbering{arabic}
+
+	\subfile{sections/chapter-1.tex}
+	%... add more chapters...
+	\printbibliography
+\end{document}
