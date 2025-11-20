@@ -1,4 +1,11 @@
-\DocumentMetadata{testphase={phase-III, math}}
+\DocumentMetadata{
+	lang=en,
+	testphase={phase-III,math,table,title},
+	pdfversion=2.0,
+	pdfstandard=ua-2,
+	pdfstandard=a-4,
+	uncompress
+}
 \documentclass[12 pt]{article}
 \usepackage[utf8]{inputenc}
 \linespread{2.0}
@@ -39,12 +46,6 @@
 			citestyle=numeric-comp]{biblatex}
 \addbibresource{dissertation-bibliography}
 
-\usepackage[pdfa]{hyperref}
-\hypersetup{colorlinks=true, allcolors=black,
-	pdftitle={Working Title},%MATCH DOCUMENT TITLE
-	pdflang={en-US}
-}
-
 \usepackage{subfiles}
 \title{{Working Title}\\
 		\vspace*{18pt}
@@ -64,6 +65,11 @@
 		Woody Hayes, Advisor}
 }
 \date{}
+\usepackage[pdfa]{hyperref}
+\hypersetup{colorlinks=true, allcolors=black,
+	pdftitle={Working Title},%MATCH DOCUMENT TITLE
+	pdflang={en-US}
+}
 \begin{document}
 	\subfile{sections/title-page.tex}
 	\subfile{sections/copyright.tex}
